@@ -54,6 +54,16 @@ preserve both when editing:
    (Bricolage Grotesque / IBM Plex Sans / JetBrains Mono), dominant color + sharp
    lime accent, grain + grid atmosphere, and the deploy-console signature element.
 
+### Installed skill library
+
+`.claude/skills/` also holds the official Anthropic skill set (from
+[anthropics/skills](https://github.com/anthropics/skills)) — e.g. `frontend-design`,
+`canvas-design`, `theme-factory`, `skill-creator`, `mcp-builder`, `webapp-testing`,
+`web-artifacts-builder`, `claude-api`, plus the document skills `docx`, `pdf`,
+`pptx`, `xlsx`. Most are Apache-2.0; the four document skills are source-available
+(see each skill's `LICENSE.txt`). These are general-purpose tools, not specific to
+this site's build.
+
 ### Conventions worth keeping
 
 - **Theme** is driven by `data-theme` on `<html>` and the `px-theme` localStorage
