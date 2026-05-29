@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Project-X — a modern starting point for building something great." />
+  <title>Project-X</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#top" aria-label="Project-X home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Project<span class="brand-accent">X</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#showcase">Showcase</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="btn btn-ghost" href="#cta">Get started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Now in early access</p>
+        <h1 class="hero-title">
+          Build something<br />
+          <span class="gradient-text">extraordinary</span>.
+        </h1>
+        <p class="hero-sub">
+          Project-X is a clean, fast foundation for your next idea — thoughtfully
+          designed, dependency-free, and ready to ship.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#cta">Get started — it's free</a>
+          <a class="btn btn-secondary" href="#features">Explore features</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" data-count="0">0</span><span class="stat-label">Dependencies</span></div>
+          <div class="stat"><span class="stat-num" data-count="100">100</span><span class="stat-label">Lighthouse-ready</span></div>
+          <div class="stat"><span class="stat-num" data-count="24">24</span><span class="stat-label">Hour setup → minutes</span></div>
+        </div>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Everything you need, nothing you don't</h2>
+          <p>A minimal core with the polish of a mature product.</p>
+        </header>
+        <div class="grid features-grid">
+          <article class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Fast by default</h3>
+            <p>No frameworks, no build step. Static assets that load instantly anywhere.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Designed to delight</h3>
+            <p>A refined visual system with fluid type, dark mode, and smooth motion.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">♿</div>
+            <h3>Accessible</h3>
+            <p>Semantic markup, keyboard-friendly navigation, and sensible contrast.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📱</div>
+            <h3>Responsive</h3>
+            <p>Looks sharp from a phone to an ultrawide, with a single fluid layout.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🧩</div>
+            <h3>Composable</h3>
+            <p>Tokens and components you can lift, rename, and extend without friction.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🚀</div>
+            <h3>Ship-ready</h3>
+            <p>Drop the files on any static host and you're live in seconds.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase -->
+    <section id="showcase" class="section section-alt">
+      <div class="container showcase">
+        <div class="showcase-copy">
+          <p class="eyebrow">Theming</p>
+          <h2>One toggle. Two moods.</h2>
+          <p>Project-X ships with a light and dark theme built from the same design
+            tokens. Try it — your choice is remembered.</p>
+          <button class="btn btn-primary" id="theme-toggle" aria-pressed="false">
+            Toggle theme
+          </button>
+        </div>
+        <div class="showcase-preview" aria-hidden="true">
+          <div class="window">
+            <div class="window-bar"><span></span><span></span><span></span></div>
+            <div class="window-body">
+              <div class="skeleton skeleton-title"></div>
+              <div class="skeleton skeleton-line"></div>
+              <div class="skeleton skeleton-line short"></div>
+              <div class="skeleton-row">
+                <div class="skeleton skeleton-chip"></div>
+                <div class="skeleton skeleton-chip"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container narrow">
+        <header class="section-head">
+          <h2>Frequently asked</h2>
+        </header>
+        <div class="faq">
+          <details>
+            <summary>What is Project-X?</summary>
+            <p>A clean starting point — a static site scaffold you can shape into a
+              product, a portfolio, or a landing page.</p>
+          </details>
+          <details>
+            <summary>Do I need a build tool?</summary>
+            <p>No. It's plain HTML, CSS, and a touch of vanilla JavaScript. Open
+              <code>index.html</code> and you're running.</p>
+          </details>
+          <details>
+            <summary>How do I deploy it?</summary>
+            <p>Push the files to any static host — GitHub Pages, Netlify, Vercel, or
+              an S3 bucket. No server required.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="section cta">
+      <div class="container cta-inner">
+        <h2>Ready to start?</h2>
+        <p>Clone it, rename it, make it yours.</p>
+        <form class="cta-form" id="cta-form" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <button class="btn btn-primary" type="submit">Notify me</button>
+        </form>
+        <p class="cta-note" id="cta-note" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Project-X</span>
+      <span class="footer-built">Built as a static scaffold — no dependencies.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
