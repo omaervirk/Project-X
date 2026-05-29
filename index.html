@@ -3,172 +3,274 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Project-X — a modern starting point for building something great." />
-  <title>Project-X</title>
+  <meta name="description" content="Project-X — the deployment platform engineering teams trust. Build, test, and ship with confidence." />
+  <meta name="theme-color" content="#080b11" />
+  <title>Project-X — ship with confidence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="grain" aria-hidden="true"></div>
+
   <header class="site-header">
-    <nav class="nav container">
+    <nav class="nav container" aria-label="Primary">
       <a class="brand" href="#top" aria-label="Project-X home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        Project<span class="brand-accent">X</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z" opacity=".25"/><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </span>
+        <span>Project<span class="brand-accent">_X</span></span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#features">Features</a></li>
-        <li><a href="#showcase">Showcase</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a class="btn btn-ghost" href="#cta">Get started</a></li>
+        <li><a href="#metrics">Results</a></li>
+        <li><a href="#testimonials">Customers</a></li>
+        <li>
+          <button class="icon-btn" id="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+        </li>
+        <li><a class="btn btn-primary btn-sm" href="#cta">Start free</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="top">
-    <!-- Hero -->
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- ============ HERO ============ -->
     <section class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Now in early access</p>
-        <h1 class="hero-title">
-          Build something<br />
-          <span class="gradient-text">extraordinary</span>.
-        </h1>
-        <p class="hero-sub">
-          Project-X is a clean, fast foundation for your next idea — thoughtfully
-          designed, dependency-free, and ready to ship.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#cta">Get started — it's free</a>
-          <a class="btn btn-secondary" href="#features">Explore features</a>
+      <div class="blueprint" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="mono-tag stagger" style="--i:0">
+            <span class="crosshair"></span> v2.2 · early access
+          </p>
+          <h1 class="hero-title">
+            <span class="stagger" style="--i:1">Ship</span>
+            <span class="stagger" style="--i:2">with</span>
+            <span class="stagger accent-word" style="--i:3">confidence.</span>
+          </h1>
+          <p class="hero-sub stagger" style="--i:4">
+            Project-X is the deployment platform engineering teams trust to build,
+            test, and release faster — without trading away reliability.
+          </p>
+          <div class="hero-actions stagger" style="--i:5">
+            <a class="btn btn-primary" href="#cta">Start free — no card</a>
+            <a class="btn btn-ghost" href="#features">
+              See how it works
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="trust-strip stagger" style="--i:6">
+            <span class="stars" role="img" aria-label="Rated 4.9 out of 5">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </span>
+            <span><strong>4.9/5</strong> · 1,200+ teams shipping daily</span>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-num" data-count="0">0</span><span class="stat-label">Dependencies</span></div>
-          <div class="stat"><span class="stat-num" data-count="100">100</span><span class="stat-label">Lighthouse-ready</span></div>
-          <div class="stat"><span class="stat-num" data-count="24">24</span><span class="stat-label">Hour setup → minutes</span></div>
-        </div>
-      </div>
-      <div class="hero-glow" aria-hidden="true"></div>
-    </section>
 
-    <!-- Features -->
-    <section id="features" class="section">
-      <div class="container">
-        <header class="section-head">
-          <h2>Everything you need, nothing you don't</h2>
-          <p>A minimal core with the polish of a mature product.</p>
-        </header>
-        <div class="grid features-grid">
-          <article class="card">
-            <div class="card-icon">⚡</div>
-            <h3>Fast by default</h3>
-            <p>No frameworks, no build step. Static assets that load instantly anywhere.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">🎨</div>
-            <h3>Designed to delight</h3>
-            <p>A refined visual system with fluid type, dark mode, and smooth motion.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">♿</div>
-            <h3>Accessible</h3>
-            <p>Semantic markup, keyboard-friendly navigation, and sensible contrast.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">📱</div>
-            <h3>Responsive</h3>
-            <p>Looks sharp from a phone to an ultrawide, with a single fluid layout.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">🧩</div>
-            <h3>Composable</h3>
-            <p>Tokens and components you can lift, rename, and extend without friction.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">🚀</div>
-            <h3>Ship-ready</h3>
-            <p>Drop the files on any static host and you're live in seconds.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Showcase -->
-    <section id="showcase" class="section section-alt">
-      <div class="container showcase">
-        <div class="showcase-copy">
-          <p class="eyebrow">Theming</p>
-          <h2>One toggle. Two moods.</h2>
-          <p>Project-X ships with a light and dark theme built from the same design
-            tokens. Try it — your choice is remembered.</p>
-          <button class="btn btn-primary" id="theme-toggle" aria-pressed="false">
-            Toggle theme
-          </button>
-        </div>
-        <div class="showcase-preview" aria-hidden="true">
-          <div class="window">
-            <div class="window-bar"><span></span><span></span><span></span></div>
-            <div class="window-body">
-              <div class="skeleton skeleton-title"></div>
-              <div class="skeleton skeleton-line"></div>
-              <div class="skeleton skeleton-line short"></div>
-              <div class="skeleton-row">
-                <div class="skeleton skeleton-chip"></div>
-                <div class="skeleton skeleton-chip"></div>
-              </div>
-            </div>
+        <!-- Signature element: live deploy console -->
+        <div class="console stagger" style="--i:4" aria-hidden="true">
+          <div class="console-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="console-title">projectx ▸ deploy --prod</span>
+          </div>
+          <div class="console-body" id="console-body">
+            <p><span class="c-time">10:24:01</span> <span class="c-ok">✓</span> build complete <span class="c-dim">· 0.8s</span></p>
+            <p><span class="c-time">10:24:02</span> <span class="c-ok">✓</span> 248 tests passed <span class="c-dim">· 1.2s</span></p>
+            <p><span class="c-time">10:24:03</span> <span class="c-ok">✓</span> image pushed <span class="c-dim">· registry.projectx.io</span></p>
+            <p><span class="c-time">10:24:05</span> <span class="c-arrow">▸</span> rolling out <span class="c-dim">3 regions</span></p>
+            <p><span class="c-time">10:24:09</span> <span class="c-ok">✓</span> <span class="c-accent">live in production</span> <span class="c-dim">· 0 downtime</span></p>
+            <p class="c-cursor"><span class="c-prompt">$</span> <span class="blink">▋</span></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="section">
-      <div class="container narrow">
+    <!-- ============ LOGO GRID ============ -->
+    <section class="logos" aria-label="Trusted by leading teams">
+      <div class="container">
+        <p class="mono-label">// trusted by teams at</p>
+        <ul class="logo-grid">
+          <li>NORTHWIND</li>
+          <li>ACME</li>
+          <li>GLOBEX</li>
+          <li>INITECH</li>
+          <li>UMBRA</li>
+          <li>HOOLI</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section id="features" class="section">
+      <div class="container">
         <header class="section-head">
-          <h2>Frequently asked</h2>
+          <p class="mono-label"><span class="crosshair"></span> why project_x</p>
+          <h2>Built for teams that ship</h2>
+          <p>A focused toolset with the reliability of a mature platform.</p>
         </header>
-        <div class="faq">
-          <details>
-            <summary>What is Project-X?</summary>
-            <p>A clean starting point — a static site scaffold you can shape into a
-              product, a portfolio, or a landing page.</p>
-          </details>
-          <details>
-            <summary>Do I need a build tool?</summary>
-            <p>No. It's plain HTML, CSS, and a touch of vanilla JavaScript. Open
-              <code>index.html</code> and you're running.</p>
-          </details>
-          <details>
-            <summary>How do I deploy it?</summary>
-            <p>Push the files to any static host — GitHub Pages, Netlify, Vercel, or
-              an S3 bucket. No server required.</p>
-          </details>
+        <div class="grid features-grid">
+          <article class="card">
+            <span class="card-no">01</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
+            <h3>Fast by default</h3>
+            <p>Sub-second builds and instant feedback loops keep your team in flow.</p>
+          </article>
+          <article class="card">
+            <span class="card-no">02</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>Secure & compliant</h3>
+            <p>SOC 2 Type II, GDPR-ready, and encrypted end to end out of the box.</p>
+          </article>
+          <article class="card">
+            <span class="card-no">03</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span>
+            <h3>Insightful analytics</h3>
+            <p>Understand performance and usage with dashboards that update live.</p>
+          </article>
+          <article class="card">
+            <span class="card-no">04</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-2.9 1.2V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 7 19.4a1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.7 1.7 0 0 0 3.6 15H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 8a1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V2a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 2.9 1.2l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V8a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
+            <h3>Composable</h3>
+            <p>A clean API and integrations that fit the tools you already use.</p>
+          </article>
+          <article class="card">
+            <span class="card-no">05</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17V9a2 2 0 0 1 2-2h2l2-3h4l2 3h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3"/></svg></span>
+            <h3>Accessible</h3>
+            <p>WCAG-conformant components, keyboard-first, and screen-reader friendly.</p>
+          </article>
+          <article class="card">
+            <span class="card-no">06</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5 12 21l7.5-4.5M4.5 12 12 16.5 19.5 12M12 3 4.5 7.5 12 12l7.5-4.5L12 3z"/></svg></span>
+            <h3>Scales with you</h3>
+            <p>From a side project to millions of requests on the same foundation.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- ============ METRICS ============ -->
+    <section id="metrics" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="mono-label">// results teams can measure</p>
+          <h2>Numbers that hold up</h2>
+        </header>
+        <div class="grid metrics-grid">
+          <div class="metric">
+            <span class="metric-num"><span data-count="99.99" data-decimals="2">0</span>%</span>
+            <span class="metric-label">Uptime SLA</span>
+          </div>
+          <div class="metric">
+            <span class="metric-num"><span data-count="40">0</span>%</span>
+            <span class="metric-label">Faster deploys</span>
+          </div>
+          <div class="metric">
+            <span class="metric-num"><span data-count="1200">0</span>+</span>
+            <span class="metric-label">Teams onboard</span>
+          </div>
+          <div class="metric">
+            <span class="metric-num"><span data-count="24">0</span>/7</span>
+            <span class="metric-label">Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="mono-label"><span class="crosshair"></span> loved by builders</p>
+          <h2>What customers say</h2>
+        </header>
+        <div class="grid testimonials-grid">
+          <figure class="testimonial">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            <blockquote>We cut our release cycle from days to minutes. Project-X just works, and the team barely thinks about infrastructure anymore.</blockquote>
+            <figcaption class="person">
+              <span class="avatar" aria-hidden="true">AM</span>
+              <span><strong>Ava Mitchell</strong><small>VP Engineering · Northwind</small></span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            <blockquote>The reliability is unreal. Six months in, zero incidents, and the dashboards tell us everything before our customers notice.</blockquote>
+            <figcaption class="person">
+              <span class="avatar" aria-hidden="true">RT</span>
+              <span><strong>Ravi Tanaka</strong><small>CTO · Globex</small></span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            <blockquote>Onboarding took an afternoon. Clear docs, a clean API, and support that actually answers. Rare combination.</blockquote>
+            <figcaption class="person">
+              <span class="avatar" aria-hidden="true">SK</span>
+              <span><strong>Sofia Kovač</strong><small>Lead Developer · Initech</small></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST BADGES ============ -->
+    <section class="section section-alt">
+      <div class="container trust-inner">
+        <div class="badge">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div><strong>SOC 2 Type II</strong><small>Independently audited</small></div>
+        </div>
+        <div class="badge">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <div><strong>GDPR Ready</strong><small>Privacy by design</small></div>
+        </div>
+        <div class="badge">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <div><strong>99.99% Uptime</strong><small>Backed by SLA</small></div>
+        </div>
+        <div class="badge">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 5v6c0 5 3.8 9 9 11 5.2-2 9-6 9-11V5l-9-3z"/></svg>
+          <div><strong>Encrypted</strong><small>End to end, at rest</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
     <section id="cta" class="section cta">
       <div class="container cta-inner">
-        <h2>Ready to start?</h2>
-        <p>Clone it, rename it, make it yours.</p>
+        <div class="blueprint blueprint-soft" aria-hidden="true"></div>
+        <p class="mono-label">// start shipping today</p>
+        <h2>Ready to ship with confidence?</h2>
+        <p>Free to start. No credit card, no commitment.</p>
         <form class="cta-form" id="cta-form" novalidate>
-          <label class="sr-only" for="email">Email address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required />
-          <button class="btn btn-primary" type="submit">Notify me</button>
+          <label class="sr-only" for="email">Work email address</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+          <button class="btn btn-primary" type="submit">Get started</button>
         </form>
-        <p class="cta-note" id="cta-note" role="status"></p>
+        <p class="cta-note" id="cta-note" role="status" aria-live="polite"></p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="year"></span> Project-X</span>
-      <span class="footer-built">Built as a static scaffold — no dependencies.</span>
+      <span class="brand brand-sm">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></span>
+        Project<span class="brand-accent">_X</span>
+      </span>
+      <span class="mono-dim">© <span id="year"></span> Project-X · built to ship</span>
     </div>
   </footer>
 

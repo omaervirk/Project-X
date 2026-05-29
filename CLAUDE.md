@@ -4,51 +4,70 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-Project-X is a **static website** — a single-page landing page built with plain HTML,
-CSS, and vanilla JavaScript. There is intentionally no framework, bundler, package
-manager, or build step. The three source files are served as-is.
+Project-X is a **static marketing website** for a developer platform — plain HTML,
+CSS, and vanilla JavaScript with no framework, bundler, or build step. The three
+source files are served as-is.
 
 ## Commands
-
-There is nothing to build or compile. To work on the site:
 
 ```sh
 # Serve locally (any static server works)
 python3 -m http.server 8000      # http://localhost:8000
 
-# Sanity-check the JavaScript syntax
+# Sanity-check the JavaScript
 node --check script.js
+
+# Query the installed design-intelligence skill
+python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<query>" --domain <style|color|typography|landing|ux|chart|product>
 ```
 
-Open `index.html` directly in a browser for a quick look; use a local server when
-testing anything that depends on a real origin.
+There is nothing to compile. Open `index.html` directly for a quick look; use a
+local server when testing anything origin-dependent.
 
 ## Architecture
 
-The site is three files that map cleanly to concerns:
+Three files map cleanly to concerns:
 
-- **`index.html`** — semantic markup and all page content. Sections are anchored by
-  `id` (`#features`, `#showcase`, `#faq`, `#cta`) and linked from the nav.
-- **`styles.css`** — the visual system. The top `:root` block defines **design
-  tokens** (colors, radius, shadow, spacing, easing). The `[data-theme="dark"]` block
-  overrides those same tokens for dark mode. Everything else references the tokens via
-  `var(--…)`, so theming and visual tweaks happen in one place rather than scattered
-  across rules.
-- **`script.js`** — progressive enhancement only; the page is fully readable without
-  it. A single IIFE wires up: theme toggle (persisted to `localStorage` under
-  `px-theme`, falling back to the OS `prefers-color-scheme`), the mobile nav,
-  `IntersectionObserver`-driven scroll reveals and stat counters, client-side CTA form
-  validation, and the footer year.
+- **`index.html`** — semantic markup. Sections are anchored by `id`
+  (`#features`, `#metrics`, `#testimonials`, `#cta`) and linked from the nav.
+- **`styles.css`** — the visual system. The `:root` block holds **design tokens**
+  (color, type, radius, shadow, spacing, motion); `[data-theme="light"]` overrides
+  the same tokens for the light variant. Everything else references them via
+  `var(--…)`, so theming and visual changes happen in one place.
+- **`script.js`** — progressive enhancement only (the page is readable without it).
+  One IIFE wires up: theme toggle (persisted to `localStorage` as `px-theme`,
+  dark default, falling back to `prefers-color-scheme`), mobile nav, the staggered
+  hero/console load, `IntersectionObserver` scroll reveals and stat counters,
+  client-side form validation, and the footer year.
+
+## Design System (how the look was decided)
+
+The aesthetic is **"engineering blueprint"** and is the product of two skills —
+preserve both when editing:
+
+1. **`ui-ux-pro-max`** (installed under `.claude/skills/`, data/scripts in
+   `src/ui-ux-pro-max/`) defines the *structure and rules*: social-proof landing
+   pattern, semantic SaaS token set, type scale, spacing, motion durations, and
+   accessibility requirements.
+2. **`frontend-design`** (system skill at `/mnt/skills/public/frontend-design`)
+   defines the *bold direction*: committed dark blueprint theme, distinctive fonts
+   (Bricolage Grotesque / IBM Plex Sans / JetBrains Mono), dominant color + sharp
+   lime accent, grain + grid atmosphere, and the deploy-console signature element.
 
 ### Conventions worth keeping
 
-- **Theme is driven by `data-theme` on `<html>`** and the `px-theme` localStorage key.
-  Add new colors as tokens in both the `:root` and dark blocks rather than hard-coding.
-- **Accessibility is load-bearing**: keep semantic elements, `aria-*` attributes, the
-  `.sr-only` pattern, and the `prefers-reduced-motion` guard (it disables animations
-  and reveals — make sure new motion respects it).
-- **No dependencies.** Keep it that way unless there's a deliberate reason to change
-  the stack; if you do, update this file and the README.
+- **Theme** is driven by `data-theme` on `<html>` and the `px-theme` localStorage
+  key. Add colors as tokens in both the `:root` and `[data-theme="light"]` blocks,
+  never hard-coded.
+- **Accessibility is load-bearing** (from `ui-ux-pro-max`): keep semantic markup,
+  `aria-*`, the `.sr-only` and `.skip-link` patterns, visible `:focus-visible`
+  rings, ≥44px touch targets, **SVG icons (never emoji)**, and the
+  `prefers-reduced-motion` guard (it disables animation and forces revealed content
+  visible — new motion must respect it).
+- **No dependencies.** Keep it that way; if the stack changes, update this file and
+  the README.
+- **Previews** (`preview-*.png`) are rendered with Playwright at
+  `/opt/pw-browsers`; regenerate them after notable visual changes.
 
 ## Git Workflow
 

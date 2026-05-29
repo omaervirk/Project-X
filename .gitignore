@@ -1,0 +1,7 @@
+# Python caches from the bundled ui-ux-pro-max skill scripts
+__pycache__/
+*.pyc
+
+# Local dev / OS
+.DS_Store
+*.log
